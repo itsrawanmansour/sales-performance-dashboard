@@ -2,6 +2,7 @@
 
 An end-to-end analytics case study: raw operational data is cleaned, modelled, validated and presented in an interactive management dashboard with an executive summary.
 
+Data note: This project is based on operational data from a company (anonymized for confidentiality).
 
 ## Dashboard
 
@@ -23,13 +24,6 @@ A multi-activity business (three business units) needed one view that connects *
 
 Six source tables, kept untouched in `RAW_*` sheets and processed in separate `CLEAN_*` sheets:
 
-```
-Leads 1 ── 0..1 Contracts 1 ── N Invoices 1 ── N Payments
-                    │
-                    └── 0..1 Projects
-
-Targets: one row per Month + Business Unit (joined by aggregating contracts to month and unit)
-```
 
 The main modelling risk was **fan-out**: joining contracts to invoices and payments repeats the contract value on every child row. This was handled by:
 
@@ -110,9 +104,10 @@ Collections and overdue balances are a **snapshot at the end of June** and do no
 - Contract value is contractual sales, not recognised accounting revenue.
 - Currency is SAR, all values excluding tax.
 
-## Tools & Skills Demonstrated
+## Tools
 
-Google Sheets (FILTER, UNIQUE, LET, SUMIFS, COUNTIFS), Looker Studio, data cleaning and validation, relational data modelling, KPI design, reconciliation testing, dashboard design, and management reporting.
+- Google Sheets
+- Looker Studio
 
 ## Repository Structure
 
@@ -125,4 +120,4 @@ Google Sheets (FILTER, UNIQUE, LET, SUMIFS, COUNTIFS), Looker Studio, data clean
 
 ## Author
 
-روان منصور
+Rawan Mansour
