@@ -2,7 +2,6 @@
 
 An end-to-end analytics case study: raw operational data is cleaned, modelled, validated and presented in an interactive management dashboard with an executive summary.
 
-> **Data note:** the project runs on a fully synthetic dataset created for practice. It contains no real customer or company data.
 
 ## Dashboard
 
